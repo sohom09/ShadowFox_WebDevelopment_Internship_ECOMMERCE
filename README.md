@@ -48,3 +48,20 @@ A modern, colorful, and user-friendly e-commerce platform built to enhance user 
 ```bash
 npm install
 npm start
+
+👨‍💻 Developed By
+
+Sohom
+ShadowFox Web Development
+
+
+---
+
+# ✅ STEP 7: Deploy to Vercel
+
+1. Go to 👉 https://vercel.com
+2. Import GitHub repo
+3. Select `ShadowFox_Ecommerce`
+4. Click Deploy
+
+Done 🔥
