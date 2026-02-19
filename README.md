@@ -5,7 +5,7 @@ A modern, colorful, and user-friendly e-commerce platform built to enhance user 
 ---
 
 ## 🚀 Live Demo
-(Deploy Link from Vercel Here)
+(https://shadow-fox-web-development-internsh.vercel.app/)
 
 ---
 
