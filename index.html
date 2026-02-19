@@ -1,69 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>GlowMart - Smart Shopping</title>
+  <title>GlowMart</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-  <div class="logo">Glow<span>Mart</span></div>
-
-  <input type="text" id="searchInput"
-    placeholder="Search for products, brands and more">
-
-  <div class="nav-right">
-    <div class="nav-item">🛒 <span id="cart-count">8</span></div>
-    <div class="nav-item">❤️ <span id="wishlist-count">0</span></div>
-    <a href="checkout.html" class="checkout-btn">Checkout</a>
-  </div>
+<header>
+  <div class="logo">🛍 GlowMart</div>
+  <a href="cart.html" class="cart-link">
+    🛒 Cart (<span id="cartCount">0</span>)
+  </a>
 </header>
 
-<!-- HERO BANNER -->
 <section class="hero">
-  <h2>Big Savings Festival 🎉</h2>
-  <p>Up to 70% OFF on Electronics & Fashion</p>
+  <h1>GlowMart - Smart Shopping</h1>
+  <p>Premium Products | Trusted Brand</p>
 </section>
+<!-- FILTER SECTION -->
+<section class="filter-section">
 
-<div class="container">
+  <div class="filter-controls">
 
-  <!-- FILTER SIDEBAR -->
-  <aside class="filters">
-    <h3>Filters</h3>
-
-    <label>Max Price: ₹<span id="priceValue">100000</span></label>
-    <input type="range" id="priceRange"
-      min="0" max="100000" value="100000">
-
-    <h4>Category</h4>
-    <label><input type="checkbox"
-      class="categoryFilter" value="Electronics"> Electronics</label>
-
-    <label><input type="checkbox"
-      class="categoryFilter" value="Fashion"> Fashion</label>
-
-    <button id="clearFilters">Clear Filters</button>
-  </aside>
-
-  <!-- PRODUCTS -->
-  <main>
-    <div class="top-bar">
-      <select id="sortOptions">
-        <option value="default">Sort By</option>
-        <option value="priceLow">Price: Low to High</option>
-        <option value="priceHigh">Price: High to Low</option>
+    <div class="filter-box">
+      <label>Category</label>
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="electronics">Electronics</option>
+        <option value="fashion">Fashion</option>
+        <option value="home">Home</option>
       </select>
-      <span id="productCount"></span>
     </div>
 
-    <div id="product-list" class="product-grid"></div>
-  </main>
+    <div class="filter-box">
+      <label>Price Range</label>
+      <select id="priceFilter">
+        <option value="all">All Prices</option>
+        <option value="2000">Under ₹2000</option>
+        <option value="10000">Under ₹10000</option>
+        <option value="30000">Under ₹30000</option>
+        <option value="50000">Under ₹50000</option>
+      </select>
+    </div>
 
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search products...">
+    </div>
+
+  </div>
+
+  <div class="premium-text">
+    Explore our curated premium collection designed for smart buyers.
+    High quality, competitive pricing, and trusted delivery — all in one place.
+    Experience next-level smart shopping with curated premium collections,
+    seamless checkout, and trusted quality assurance.
+  </div>
+
+</section>
+
+
+
+<section class="products" id="productContainer"></section>
+
+<!-- MODAL -->
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">×</span>
+    <img id="modalImage">
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+    <ul id="modalFeatures"></ul>
+    <h3 id="modalPrice"></h3>
+    <button id="modalAddBtn">Add to Cart</button>
+  </div>
 </div>
 
 <script src="js/products.js"></script>
 <script src="js/main.js"></script>
+
 </body>
 </html>

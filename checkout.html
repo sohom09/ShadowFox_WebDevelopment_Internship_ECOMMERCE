@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Checkout - ShopX</title>
+  <title>Checkout</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="checkout-box">
-  <h2>Checkout</h2>
+<header>
+  <div class="logo">🛍 GlowMart</div>
+</header>
 
-  <form id="checkoutForm">
-    <input type="text" placeholder="Full Name" required>
-    <input type="email" placeholder="Email" required>
-    <input type="text" placeholder="Shipping Address" required>
-    <button type="submit">Place Order</button>
-  </form>
+<h2 class="title">Checkout</h2>
+
+<div class="checkout-box">
+  <input type="text" id="name" placeholder="Full Name" required>
+  <input type="text" id="address" placeholder="Address" required>
+  <input type="text" id="phone" placeholder="Phone Number" required>
+
+  <button onclick="placeOrder()">Pay Now</button>
 </div>
 
 <script src="js/checkout.js"></script>
